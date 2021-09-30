@@ -14,7 +14,7 @@ github: FORCE
 tests: lint unit
 
 unit: FORCE
-	echo "Tests go here!"
+	cd $(API_DIR); nosetests --with-coverage --cover-package=API
 
 lint: FORCE
 	$(LINTER) $(API_DIR)/*.py
