@@ -7,6 +7,7 @@ from flask import Flask
 from flask_restx import Resource, Api
 import db.db as db
 
+
 app = Flask(__name__)
 api = Api(app)
 HELLO = 'hello'
@@ -50,3 +51,15 @@ class Pets(Resource):
         This method returns all pets.
         """
         return db.fetch_pets()
+
+
+@api.route('/create_user/<username>')
+class CreateUser(Resource):
+    """
+    This class supports adding user to db
+    """
+    def post(self, username):
+        """
+        this method adds user to the chatroom
+        """
+        return username
