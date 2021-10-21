@@ -15,7 +15,7 @@ script:
 deploy:
     - provider: heroku
       api_key: $HEROKU_API_KEY
-      app: demo-repo22
+      app: flask-api-zjx
       on:
           branch: master
 
